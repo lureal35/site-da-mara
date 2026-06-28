@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Mercado da Mara - Moda com Estilo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1><i class="fas fa-store"></i> Mercado da Mara</h1>
+        <p class="tagline">Moda autêntica para você</p>
+      </div>
+      <nav>
+        <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+        <a href="#produtos" class="nav-link"><i class="fas fa-tshirt"></i> Produtos</a>
+        <a href="index.html?filtro=masculino#produtos" class="nav-link"><i class="fas fa-male"></i> Masculino</a>
+        <a href="index.html?filtro=feminino#produtos" class="nav-link"><i class="fas fa-female"></i> Feminino</a>
+        <a href="sobre.html" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a>
+        <a href="#contato" class="nav-link"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="carrinho.html" class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <h2>Moda que expressa sua personalidade</h2>
+      <p>Descubra peças exclusivas para todos os estilos</p>
+      <a href="#produtos" class="btn-banner">Ver Coleção</a>
+    </div>
+  </section>
+
+  <section id="produtos" class="produtos">
+    <div class="section-header">
+      <h2>Nossos Produtos</h2>
+      <p>Encontre o look perfeito para cada ocasião</p>
+      <div class="filtros">
+        <button class="filtro-btn active" onclick="filtrar('todos')">Todos</button>
+        <button class="filtro-btn" onclick="filtrar('masculino')">Masculino</button>
+        <button class="filtro-btn" onclick="filtrar('feminino')">Feminino</button>
+        <button class="filtro-btn" onclick="filtrar('promocao')">Promoções</button>
+      </div>
+    </div>
+    
+    <div class="produtos-container" id="produtos-home-container">
+      <!-- Produtos serão carregados dinamicamente pelo JavaScript -->
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="contato-container">
+      <div class="contato-info">
+        <h2><i class="fas fa-phone-alt"></i> Fale Conosco</h2>
+        <p>Tire suas dúvidas ou faça seu pedido diretamente pelo WhatsApp</p>
+        <div class="contato-detalhes">
+          <p><i class="fab fa-whatsapp"></i> WhatsApp: (11) 98765-4321</p>
+          <p><i class="fas fa-envelope"></i> Email: contato@mercadodamara.com.br</p>
+          <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua da Moda, 123 - Centro, SP</p>
+          <p><i class="fas fa-clock"></i> Horário: Seg a Sex, 9h às 18h</p>
+        </div>
+        <div class="redes-sociais">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="newsletter">
+        <h3>Receba Ofertas Exclusivas</h3>
+        <p>Cadastre-se e receba descontos e novidades em primeira mão</p>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Mercado da Mara &copy; 2023 - Todos os direitos reservados</p>
+    <p>Desenvolvido com <i class="fas fa-heart"></i> para amantes da moda</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> | 
+      <a href="#contato">Contato</a> | 
+      <a href="carrinho.html">Carrinho</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
